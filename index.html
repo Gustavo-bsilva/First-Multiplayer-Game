@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jojo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="screen" width="10" height="10"></canvas>
+    <script type="module">
+        import createKeyboardListener from './keyboard-listener.js';
+        import createGame from './game-module.js'
+        import renderScreen from './render-screen.js';
+
+        const screen = document.getElementById('screen');
+        const context = screen.getContext("2d");
+        const currentPlayerId = 'player1';
+
+        const game = createGame();
+        const keyboardListener = createKeyboardListener(document);
+        keyboardListener.subscribe(game.movePlayer);
+
+        renderScreen(screen, game, requestAnimationFrame);
+
+        game.addPlayer( { playerId: 'player1', playerX: 0, playerY: 0 } );
+        game.addFruit( { fruitId: 'fruit1', fruitX: 3, fruitY: 3 } );
+
+
+    </script>
+</body>
+</html>
