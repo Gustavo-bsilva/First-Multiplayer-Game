@@ -11,3 +11,5 @@
 <p>O jogo funciona com o client entrando no link em seu browser, que recebe um recebe um socket e é adicionado no jogo, todo jogador fica com a cor amarelo para si mesmo, mas os outros jogadores ficam com a cor preta, a movimentação é feita através das setas do teclado.
   
 As frutinhas são o que dão pontos aos jogadores, quando um jogador colide com uma frutinha, essa é retirada do jogo e um ponto é adicionado ao jogador que colidiu com a mesma.</p>
+
+<p>O tamanho do campo do jogo pode ser redefinido apenas passando um novo tamanho</p>
